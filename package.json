@@ -1,0 +1,32 @@
+{
+  "name": "concept-project",
+  "version": "1.0.0",
+  "description": "concept project setup to mjest",
+  "main": "src",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon -i \"*.test.js\" .",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node src/config/generateSwaggerDocs.js && openapi-generator-cli generate -g html -i swagger.json -o ./swagger-docs && open ./swagger-docs/index.html"
+  },
+  "author": "Eduardo da Silva Rocha",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "mongoose-express-sanitizer": "^2.0.0",
+    "open": "^9.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/register": "^7.22.5",
+    "@openapitools/openapi-generator-cli": "^2.6.0",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.43.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  }
+}
